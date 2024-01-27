@@ -20,7 +20,7 @@ connectToDb((err) => {
   }
 });
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({origin:["https://deploy-mern-1whq.vercel.app"],methods:["POST","GET"],credentials:true}));
 
 // Routes
 app.get("/users", (req, res) => {
